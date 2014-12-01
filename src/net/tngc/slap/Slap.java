@@ -7,7 +7,7 @@ import net.canarymod.plugin.Plugin;
 public class Slap extends Plugin{
 	
 	 public static String Plugin_Name = "Slap ";
-	 public static String Plugin_Version = "1.1 ";
+	 public static String Plugin_Version = "1.2 ";
 	 public static String Plugin_Author = "Scoin0 ";
 
 	@Override
@@ -16,6 +16,8 @@ public class Slap extends Plugin{
 		
 		try{Canary.commands().registerCommands(new commandSlap(), this, false);
 		}catch(CommandDependencyException e){ getLogman().error("Error with Command: ", e);}
+		
+		new Configuration().loadProperties();
 		return true;
 	}
 	
