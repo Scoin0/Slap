@@ -21,15 +21,12 @@ public class commandSlap implements CommandListener{
 	    double end = prop.getDouble("Max_Double");
 	    double n = random.nextDouble();
 	    double n1 = random.nextDouble();
-	    double n2= random.nextDouble();
 	    double result = start + (n * (end - start));
 	    double result1 = start + (n1 * (end - start));
-	    double result2 = start + (n2 * (end - start));
 	    
 	    if(targetPlayer != null){
 		    targetPlayer.setMotionX(result);
 		    targetPlayer.setMotionY(result1);
-		    targetPlayer.setMotionY(result2);
 		    
 		    targetPlayer.message("§cYou've been slapped by §a" + caller.getName() + " §c!");
 		    //targetPlayer.message("§cThe power of the slap was §a" + result + " §cfor X,§a" + result1 + " §cfor Yand §a" + result2 + " §cfor Z!"); 
