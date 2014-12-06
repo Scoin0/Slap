@@ -5,6 +5,7 @@ import java.util.Random;
 import net.canarymod.Canary;
 import net.canarymod.api.entity.living.humanoid.Player;
 import net.canarymod.chat.MessageReceiver;
+import net.canarymod.chat.TextFormat;
 import net.canarymod.commandsys.Command;
 import net.canarymod.commandsys.CommandListener;
 import net.visualillusionsent.utils.PropertiesFile;
@@ -28,8 +29,8 @@ public class commandSlap implements CommandListener{
 		    targetPlayer.setMotionX(result);
 		    targetPlayer.setMotionY(result1);
 		    
-		    targetPlayer.message("§cYou've been slapped by §a" + caller.getName() + " §c!");
-		    //targetPlayer.message("§cThe power of the slap was §a" + result + " §cfor X,§a" + result1 + " §cfor Yand §a" + result2 + " §cfor Z!"); 
+		    targetPlayer.message(TextFormat.LIGHT_RED + "You've been slapped by " + TextFormat.GREEN + caller.getName() + TextFormat.LIGHT_RED +"!");
+		    //targetPlayer.message("Â§cThe power of the slap was Â§a" + result + " Â§cfor X,Â§a" + result1 + " Â§cfor Yand Â§a" + result2 + " Â§cfor Z!"); 
 		    //Above is for debugging.
 	    }else{
 	    	caller.notice("The player you are trying to slap is not online.");
